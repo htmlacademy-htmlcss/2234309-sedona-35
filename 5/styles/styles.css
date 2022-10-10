@@ -21,7 +21,8 @@ body {
   color: #000000;
 }
 
-.button-primary {
+.button {
+  padding: 8px 34px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -30,43 +31,24 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background: #756157;
+  border: 0;
   border-radius: 4px;
+}
+
+.button-primary {
+  background: #756157;
 }
 
 .button-secondary {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
   background: #82B3D3;
-  border-radius: 4px;
 }
 
 .button-reset {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
   background: transparent;
 }
 
 .button-selected {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
   background: #7DB54F;
-  border-radius: 4px;
 }
 
 .page-header {
@@ -114,6 +96,8 @@ body {
 }
 
 .advantages-subject {
+  font-size: 24px;
+  line-height: 28px;
   text-transform: uppercase;
 }
 
@@ -174,6 +158,12 @@ body {
   color: #333333;
 }
 
+.proposal-button {
+  padding: 8px 50px;
+  font-size: 20px;
+  line-height: 36px;
+}
+
 .newsletter {
   text-align: center;
 }
@@ -185,7 +175,13 @@ body {
   text-transform: uppercase;
 }
 
+.newsletter-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
 .newsletter-button {
+  padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
   border-radius: 0 4px 4px 0;
@@ -289,7 +285,5 @@ body {
 }
 
 .page-inner-footer .newsletter-text {
-  font-size: 22px;
-  line-height: 26px;
   color: #333333;
 }
