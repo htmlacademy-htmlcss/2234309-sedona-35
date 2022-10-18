@@ -20,9 +20,7 @@ html {
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  height: 100%;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -73,7 +71,10 @@ body {
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
   width: 1200px;
+  min-height: 100%;
   margin: 0 auto;
 }
 
@@ -85,8 +86,6 @@ body {
 
 .navigation {
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .navigation-logo {
@@ -156,6 +155,7 @@ body {
 
 .advantages-item:last-child,
 .advantages-item:first-child {
+  display: flex;
   width: 100%;
   color: #ffffff;
   background-color: #82B3D3;
@@ -268,6 +268,8 @@ body {
   height: 415px;
   color: #ffffff;
   background-image: url("../images/subscribe-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .footer-bottom-wrapper {
