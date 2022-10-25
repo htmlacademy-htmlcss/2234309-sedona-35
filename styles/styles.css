@@ -93,10 +93,7 @@ body {
 }
 
 .navigation-logo {
-  position: relative;
-  z-index: 1;
-  width: 140px;
-  margin-right: 28px;
+  position: absolute;
 }
 
 .logo {
@@ -109,6 +106,7 @@ body {
   width: 465px;
   margin: 0;
   padding: 0;
+  padding-left: 168px;
   list-style: none;
 }
 
@@ -142,26 +140,17 @@ body {
 }
 
 .main-container {
-  position: relative;
-  bottom: 6px;
   flex-grow: 1;
 }
 
 .index-header {
   display: flex;
+  justify-content: center;
+  padding: 51px 0 82px;
   height: 485px;
   background-image: url("../images/hero-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-
-.index-header-welcome {
-  width: 100%;
-  margin-bottom: 50px;
-  background-image: url("../images/welcome.svg");
-  background-size: 458px auto;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .advantages {
