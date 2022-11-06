@@ -14,13 +14,8 @@
   font-display: swap;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
-  height: 100%;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -75,7 +70,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 1200px;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -93,10 +88,7 @@ body {
 }
 
 .navigation-logo {
-  position: relative;
-  z-index: 1;
-  width: 140px;
-  margin-right: 28px;
+  position: absolute;
 }
 
 .logo {
@@ -109,6 +101,7 @@ body {
   width: 465px;
   margin: 0;
   padding: 0;
+  padding-left: 168px;
   list-style: none;
 }
 
@@ -125,7 +118,7 @@ body {
 
 .navigation-user .navigation-item:last-child {
   align-self: center;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
 .navigation-user .navigation-link {
@@ -142,26 +135,16 @@ body {
 }
 
 .main-container {
-  position: relative;
-  bottom: 6px;
   flex-grow: 1;
 }
 
 .index-header {
   display: flex;
-  height: 485px;
+  justify-content: center;
+  padding: 51px 0 82px;
   background-image: url("../images/hero-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-
-.index-header-welcome {
-  width: 100%;
-  margin-bottom: 50px;
-  background-image: url("../images/welcome.svg");
-  background-size: 458px auto;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .advantages {
@@ -314,7 +297,7 @@ body {
 }
 
 .proposal {
-  padding: 96px 0 90px;
+  padding: 95px 0;
   text-align: center;
 }
 
@@ -342,8 +325,8 @@ body {
 }
 
 .newsletter {
-  padding-top: 96px;
-  padding-bottom: 104px;
+  padding-top: 97px;
+  padding-bottom: 105px;
   text-align: center;
 }
 
@@ -430,7 +413,7 @@ body {
 }
 
 .footer-htmlacademy {
-  align-self: flex-end;
+  align-self: center;
 }
 
 .inner-header {
@@ -549,7 +532,7 @@ body {
 }
 
 .catalog {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   padding: 50px 70px;
 }
 
@@ -597,7 +580,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 37px;
   padding: 0;
   padding-bottom: 22px;
   padding-top: 40px;
@@ -605,6 +588,16 @@ body {
 }
 
 .hotel-card {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px auto auto auto auto;
+  grid-template-areas:
+    "image image"
+    "title title"
+    "type price"
+    "detail favourites"
+    "stars rating";
+  gap: 16px 20px;
   width: 300px;
   margin-bottom: 18px;
   padding: 20px;
@@ -617,21 +610,17 @@ body {
 }
 
 .hotel-image {
-  margin-bottom: 13px;
+  grid-area: image;
+  object-fit: contain;
 }
 
 .hotel-title {
-  margin-top: 0;
-  margin-bottom: 16px;
+  grid-area: title;
+  margin: 0;
+  padding-top: 1px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-}
-
-.hotel-info-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
 }
 
 .hotel-type,
@@ -639,21 +628,23 @@ body {
   color: #333333;
 }
 
+.hotel-type {
+  grid-area: type;
+}
+
 .hotel-price {
+  grid-area: price;
+  justify-self: end;
   font-weight: inherit;
 }
 
-.hotel-buttons-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
 .hotel-button-detail {
+  grid-area: detail;
   padding: 8px 26px;
 }
 
 .hotel-button-favourites {
+  grid-area: favourites;
   padding: 8px 20px;
 }
 
@@ -661,12 +652,8 @@ body {
   padding: 8px 18px;
 }
 
-.hotel-rating-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
 .hotel-stars-list {
+  grid-area: stars;
   display: flex;
   margin: 0;
   padding: 0;
@@ -684,8 +671,9 @@ body {
 }
 
 .hotel-card-rating {
+  grid-area: rating;
   display: block;
-  padding: 10px 22px 8px 23px;
+  padding: 9px 22px 8px 23px;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
