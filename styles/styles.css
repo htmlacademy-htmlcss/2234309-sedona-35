@@ -507,7 +507,7 @@ img {
   color: #ffffff;
   background-color: #82b3d3;
   background-image: url("../images/subscribe-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -691,7 +691,7 @@ img {
   color: #ffffff;
   background-color: #82b3d3;
   background-image: url("../images/hero-background-inner.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -721,8 +721,8 @@ img {
 .filtering-buttons-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   width: 191px;
+  padding-top: 56px;
 }
 
 .filtering-title {
@@ -841,7 +841,7 @@ img {
 }
 
 .control:focus:not(:focus-visible) .control-mark {
-  border-color: #83b3d3;
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
 .control:active {
@@ -874,12 +874,13 @@ img {
 
 .catalog-top-wrapper {
   display: flex;
+  align-items: start;
 }
 
 .sorting-text {
-  align-self: center;
   margin: 0;
   margin-right: auto;
+  padding-top: 7px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -888,7 +889,7 @@ img {
 
 .sorting-select {
   width: 292px;
-  margin-right: 22px;
+  margin-right: 70px;
 }
 
 .select {
@@ -905,6 +906,7 @@ img {
   font: inherit;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  background-color: #ffffff;
   background-image: url("../images/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 18px center;
@@ -928,19 +930,17 @@ img {
 }
 
 .view-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
   margin: 0;
   padding: 0;
-  width: 208px;
   list-style: none;
 }
 
 .view-item {
   min-width: 48px;
   min-height: 48px;
-  margin-right: 8px;
 }
 
 .view-item:last-child {
