@@ -817,6 +817,7 @@ img {
   display: block;
   padding-left: 36px;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .control-mark {
@@ -840,7 +841,7 @@ img {
   opacity: 0.6;
 }
 
-.control:focus:not(:focus-visible) .control-mark {
+.control-input:focus + .control-mark {
   box-shadow: 0 0 0 3px #83b3d3;
 }
 
